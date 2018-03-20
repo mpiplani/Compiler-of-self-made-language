@@ -3,9 +3,9 @@ This contains a self made language that is a mixture of C and python and self ma
 
 Compilation Steps 
 
-	$ lex c.l
+	$ lex x.l
 	
-	$ yacc c.y
+	$ yacc x.y
 	
 	$ gcc y.tab.c -ll -ly
 	

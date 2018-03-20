@@ -1,0 +1,9 @@
+int a;
+funk int factorial(int a){
+int q;
+while(i<0){
+q=q*i;
+}
+return q;
+}
+factorial(a);
