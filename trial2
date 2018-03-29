@@ -1,0 +1,14 @@
+int a = 10;
+funk int factorial(int a){
+int q = 1;
+for(int i;i<=a;i++){
+q=q*i;
+}
+return q;
+}
+factorial(a);
+int s = factorial(a);
+print(s);
+
+
+

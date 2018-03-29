@@ -1,0 +1,16 @@
+int a = 10;
+funk int armstrong(int a){
+int m=a;
+int d=0,s=0;
+while(m>0){
+d=m%10;
+s=s+cube(d);
+m=m/10;
+}
+}
+if(s==a){
+print(a);
+}
+funk int cube (int m){
+return m*m*m;
+}
