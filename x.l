@@ -52,10 +52,10 @@ alphabet		[a-zA-Z]
 "&&"		return(LOGICAND);
 "||"		return(LOGICOR);
 
-{digit}+       return (SIZE);
-{alphabet}({alphabet}|{digit})* return (ID);
-{digit}+"."{digit}+			return(CONSTANT);
-\"(\\.|[^\\"])*\"		return(STRING);
+{digit}+       {yylval=atoi(yytext); return SIZE;}
+{alphabet}({alphabet}|{digit})* {return (ID);yylval=atoi(yytext);}
+{digit}+"."{digit}+		{yylval=strdup(yytext);return(CONSTANT);}
+\"(\\.|[^\\"])*\"		{yylval=strdup(yytext);return(STRING);}
 
 ";"				{ count(); return(';'); }
 "{"				{ count(); return('{'); }

@@ -884,22 +884,22 @@ return(LOGICOR);
 case 38:
 YY_RULE_SETUP
 #line 55 "x.l"
-return (SIZE);
+{yylval=atoi(yytext); return SIZE;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
 #line 56 "x.l"
-return (ID);
+{return (ID);yylval=atoi(yytext);}
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
 #line 57 "x.l"
-return(CONSTANT);
+{yylval=strdup(yytext);return(CONSTANT);}
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
 #line 58 "x.l"
-return(STRING);
+{yylval=strdup(yytext);return(STRING);}
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
